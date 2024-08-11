@@ -6,9 +6,7 @@ function checkAnswer() {
   const feedbackElement = document.getElementById("feedback");
 
   if (userAnswer) {
-    const answerValue = userAnswer.value;
-
-    if (answerValue === correctAnswer) {
+    if (userAnswer.value === correctAnswer) {
       feedbackElement.textContent = "Correct! Well done.";
     } else {
       feedbackElement.textContent = "That's incorrect. Try again!";
@@ -17,5 +15,6 @@ function checkAnswer() {
     feedbackElement.textContent = "Please select an answer.";
   }
 }
+
 const submitButton = document.getElementById("submit-answer");
 submitButton.addEventListener("click", checkAnswer);
